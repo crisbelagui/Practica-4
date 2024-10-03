@@ -1,0 +1,43 @@
+# Modulo de calendario
+
+Este proyecto es un modulo de un calendario que se implementa a un sistema crm de marketing. En este documento, se describen las violaciones encontradas mediante SonarLint, las correcciones realizadas y los fragmentos de código afectados.
+
+## Violaciones y Correcciones
+
+#1 
+codigo original: 
+    import React, { useState, useEffect } from "react";
+Corrección:
+    import React, { useState } from "react";
+#2
+Codigo original:
+    <div className={styles.mes} onClick={toggleMostrarCalendario}>
+Corrección:
+    <button className={styles.mes} onClick={toggleMostrarCalendario} aria-label="Mostrar calendario">
+            Mostrar Calendario
+    </button>
+#3
+Codigo original:
+    <button className={styles.crearTareaBtn} onClick={toggleCrearNota}>
+          Crear Nota
+        </button>
+Correccion:
+    <button className={`${styles.semana} ${styles.a}`} onClick={toggleMostrarCalendarioSemanal} aria-label="Mostrar calendario semanal">
+  Mostrar Calendario Semanal
+</button>
+#4
+Codigo original:
+     <label for='tituloNota'>Titulo</label>
+coreccion:
+      <label htmlFor='tituloNota'>Titulo</label>
+#5
+Codigo original: 
+      <label for='fecha'>Fecha</label>
+Correccion:
+
+#6
+Codigo original:
+      <label for='notas'>Notas</label>
+correccion: 
+      
+    
